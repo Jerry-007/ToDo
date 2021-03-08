@@ -1,0 +1,46 @@
+body {
+  margin: 3rem 0rem;
+  background-color: #222831;
+  color: #eeeeee;
+}
+.custom-item {
+  background-color: #393e46;
+  border: 3px solid #00adb5;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+  height: 6.3rem;
+  padding: 0.6rem 2.2rem;
+  transition: 0.9s;
+}
+.custom-item:hover{
+  transform:scale(0.93,0.96);
+  transition: 0.2s;
+}
+.c-btn {
+  background-color: #00adb5;
+  color: #eeeeee;
+  transition: 0.2s;
+}
+.c-btn:hover {
+  transform: scale(1.1, 1.1);
+  transition: 0.2s;
+}
+
+.custom{
+  background-color: #393e46;
+  border-radius: 3rem;
+  width:60%;
+  padding: 3rem;
+}
+
+.btn-del{
+  background-color: #222831;
+  border: 1.5px solid #00adb5;
+  color:#eeeeee;
+  transition: 0.2s;
+}
+.btn-del:hover{
+  transform: scale(1.15,1.15);
+  color:#eeeeee;
+  transition: 0.2s;
+}
