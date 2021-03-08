@@ -17,21 +17,17 @@ function App() {
     };
     getTasks();
   }, []);
-  const deleteTask = (id) => {
-    axios.delete(`api/tasks/${id}`);
-    setTasks((tasks) => tasks.filter((task) => task._id !== id));
-  };
   return (
     <Router>
       <Route path="/" exact>
         <Header setShowAddTask={setShowAddTask} showAddTask={showAddTask} />
         {showAddTask ? (
-          <AddTask deleteTask={deleteTask} setTasks={setTasks} tasks={tasks} />
+          <AddTask setTasks={setTasks} tasks={tasks} />
         ) : (
           ""
         )}
         {tasks.length > 0 ? (
-          <Tasks deleteTask={deleteTask} tasks={tasks} />
+          <Tasks setTasks={setTasks} tasks={tasks} />
         ) : (
           <div className="text-center fs-5 container custom">
             No Tasks to Show

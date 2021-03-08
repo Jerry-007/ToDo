@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const AddTask = ({ deleteTask, setTasks, tasks }) => {
+const AddTask = ({ setTasks, tasks }) => {
   const Submitted = async (e) => {
     e.preventDefault();
     if (e.target[0].value === "" || e.target[1].value === "") {
@@ -20,11 +20,8 @@ const AddTask = ({ deleteTask, setTasks, tasks }) => {
     };
     const res = await axios.post("api/tasks", newTask);
     setTasks([...tasks, res.data]);
-    setTimeout(() => {
-      deleteTask(res.data._id);
-    }, e.target[3].value * 60000);
-
     alert(`${res.data.Name} , Added`);
+    
     e.target[0].value = "";
     e.target[1].value = "";
     e.target[2].value = "";
